@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Jobs\SendEmailUser;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
     // (new App\Jobs\SendEmailUser())->handle();
     return view('welcome');
 });
+
+Route::get('/user', [UserController::class, 'index']);

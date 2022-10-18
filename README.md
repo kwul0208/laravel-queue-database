@@ -6,3 +6,7 @@
 
 # final, for run
 - php artisan queue:work
+
+
+# job person
+- php artisan make:job PersonJob
