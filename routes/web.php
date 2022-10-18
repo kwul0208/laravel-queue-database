@@ -1,5 +1,6 @@
 <?php
 
+use App\Jobs\SendEmailUser;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    App\Jobs\SendEmailUser::dispatch();
+    // (new App\Jobs\SendEmailUser())->handle();
     return view('welcome');
 });
